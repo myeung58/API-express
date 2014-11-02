@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141102012543) do
   create_table "requests", force: true do |t|
     t.string   "name"
     t.string   "type"
+    t.string   "url"
     t.string   "doc"
     t.integer  "package_id"
     t.datetime "created_at"
