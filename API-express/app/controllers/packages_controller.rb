@@ -5,9 +5,8 @@ class PackagesController < ApplicationController
   end
 
   def create
-    p params
-    # api_helper()
     @user = User.find(params[:user_id])
+    api_helper(@user.id, params[:api], params[:auth_key], params[:client_key])
     redirect_to user_path(@user)
   end
 

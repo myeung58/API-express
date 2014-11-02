@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141102012543) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "password"
+    t.text     "code_snippet", default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
   end

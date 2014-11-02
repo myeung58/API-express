@@ -1,4 +1,5 @@
 <a href="/logout">Log out</a>
+<div class="container">
 <p>Selected Packages:</p>
 <% @packages.each do |package| %>
   <% requests = package.requests %>
@@ -10,10 +11,12 @@
 <% end %>
 
 <h2>You code snippet:</h2>
-<p>some code</p>
+<div class="snippet">
+  <%= @user.code_snippet %>
+</div>
 
 <p>Add New Packages</p>
 <% @available_packages.each do |package| %>
   <%= package %> <a href="/users/<%=@user.id%>/new_<%=package.downcase%>">add</a>
 <% end %>
-
+</div>

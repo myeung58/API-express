@@ -1,0 +1,19 @@
+body {
+  background-color: #FFCCCC;
+  text-align: center;
+}
+
+.container {
+  background-color: #E6E6E6;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.snippet {
+  width: 500px;
+  margin: 0 auto;
+  border: solid;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 1px;
+}
