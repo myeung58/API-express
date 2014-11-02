@@ -1,0 +1,16 @@
+<p>logged in</p>
+<a href="/logout">Log out</a>
+<p>Selected Packages:</p>
+<% @packages.each do |package| %>
+  <% requests = package.requests %>
+  <%= package.api %>
+  <p>Available requests:</p>
+  <% requests.each do |request| %>
+    <%= request.name %>
+  <% end %>
+<% end %>
+
+<p>Add New Packages</p>
+<% @available_packages.each do |package| %>
+  <%= package %><a href="">add</a>
+<% end %>
