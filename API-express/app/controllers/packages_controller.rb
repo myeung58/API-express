@@ -6,15 +6,19 @@ class PackagesController < ApplicationController
 
   def create
     p params
-    # api_helper
+    # api_helper()
+    @user = User.find(params[:user_id])
+    redirect_to user_path(@user)
   end
 
   def yo
+    @user = User.find(params[:user_id])
+    @name = params[:action]
     @package = Package.new
+    render partial: "form"
   end
 
   def twitter
-    p params
     @user = User.find(params[:user_id])
     @name = params[:action]
     @package = Package.new
