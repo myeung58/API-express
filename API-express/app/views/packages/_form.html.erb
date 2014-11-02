@@ -1,0 +1,12 @@
+<form action="/users/<%=@user.id%>/packages" class="new_package" id="new_package" method="post">
+  <label for="api">api package</label>:
+  <input id="api" name="api" type="text" value="<%=@name%>" readonly/><br />
+
+  <label for="auth_key">auth_key</label>:
+  <input id="auth_key" name="auth_key" type="text" /><br />
+
+  <label for="client_key">client_key</label>:
+  <input id="client_key" name="client_key" type="text" placeholder="optional"/><br />
+
+  <input name="submit" type="submit" value="add" />
+</form>

@@ -1,0 +1,12 @@
+<%= form_for @package do |f| %>
+  <%= f.text_field :api %>
+  <%= f.text_field :api,:readonly => true, :value => @name %>
+
+  <%= f.label :auth_key %>:
+  <%= f.text_field :auth_key %><br />
+
+  <%= f.label :client_key %>:
+  <%= f.text_field :client_key %><br />
+
+  <%= f.submit %>
+<% end %>

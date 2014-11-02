@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "/logout" => 'sessions#logout'
 
   resources :users do
+    get '/new_yo' => 'packages#yo'
+    get '/new_twitter' => 'packages#twitter'
     resources :packages do
       resources :requests
     end
